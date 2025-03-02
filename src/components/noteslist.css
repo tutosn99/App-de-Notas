@@ -1,0 +1,34 @@
+.notesContainer{
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.noteCard{
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    min-height: 150px;
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 10px 25px 10px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.noteCard h1{
+    font-size: 1.3rem;
+}
+.noteCard h2{
+    flex: 1;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.btnNotes{
+    display: flex;
+}
+
+.btnNotes .open{
+    flex: 1;
+}

@@ -1,0 +1,45 @@
+Funciones:
+    Agregar Notas
+    Ver las Notas Existentes
+    Editar las Notas Existentes
+    Eliminar las Notas Existentes
+
+Funciones Adicionales:
+    Persistir los datos (LocalStorage)
+    Categoria o Etiquetas
+    Busqueda y Filtrado
+
+<------------------------------------------------------>
+
+Agregar Notas
+[x] Agregar Formulario
+|____ [x] Agregar Campo Para Ingresar Titulo
+|____ [x] Agregar Campo Para Ingresar Subtitulo
+|____ [x] Agregar Campo Para Ingresar Contenido
+|____ [x] Agregar Botón de Añadir 
+
+Ver las Notas Existentes
+[x] Agregar Lista de Notas
+|____ [x] Agregar Contenedor
+|____ [x] Consultar Tareas Existentes
+|____ [X] Mostrar Tareas Existentes
+       |____ [X] Mostrar la El Titulo y Subtitulo
+       |____ [X] Mostrar Botón para Visualizar la Tarea
+             |____ [x] Mostrar un Modal al Pulsar el Botón
+
+Editar las Notas Existentes
+[x] Agregar Boton de Editar (Ícono Lapiz)
+|____ [x] Mostrar un Modal con los 3 Campos a Editar 
+       |____ [x] Mostrar los Contenidos dentro de un Campo Editable
+       |____ [x] Agregar Botón para Guardar
+
+Eliminar Tareas
+[] Agregar Botón de Borrar (Ícono Basura)
+|____ [] Mostrar un Modal de Confirmación
+       |____ [] Mostrar Texto de Advertencia
+       |____ [] Agregar Boton de Confirmar
+
+a mi yo del 2/3/25:
+necesitas terminar el modal y el problema que tenemos ahora es el siguiente:
+me acabo de dar cuenta que la logica está mal ya que, al crear un modal por cada nota creada, se crean 4 modales distintos cuando mi intencion es que exista un solo modal que busque los datos de la nota especificada por la id. al pulsar el boton abrir nota se están abriendo los 4 modales con el dato que le diste. como solucion a este problema voy a reescribir el modal con la intecion de que en NotesList.jsx lo contenga y lo muestre con datos recogidos del boton, el cual le va dar la id y con esa id voy a poder filtrar para mostrar tal dato recogido, espero que te funcione c:
+att: yo 12:23am 
