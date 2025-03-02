@@ -3,7 +3,7 @@ import { NoteContext } from '../context/NotesContext'
 
 function NotesForm() {
 
-    const { crearNota} = useContext(NoteContext)
+    const {notas, crearNota} = useContext(NoteContext)
 
     const [titleInput, setTitleInput] = useState()
     const [subtitleInput, setSubtitleInput] = useState()
@@ -16,6 +16,7 @@ function NotesForm() {
 
     return (
         <div className="containerForm">
+            <button onClick={()=>{console.log(notas)}}>Ver Tareas por Consola</button>
             <form onSubmit={formHandleSubmit}>
                 <div className="formInput" id="title">
                     <label>Titulo</label>

@@ -50,11 +50,13 @@ function NotesList() {
   const realizarCambios = (notas, cambios) => {
     const nuevasNotas = notas.filter((nota) => nota.id !== cambios.id);
     nuevasNotas.push(cambios);
+    nuevasNotas.sort((a, b) => a.id - b.id)
     setNotas(nuevasNotas);
     setModalActive(false);
     setModalEdit(false);
     console.log("datos cambiados: ", cambios);
   };
+
 
   const editInfo = (noteEdited) => {
     const notaCambiada = notas.find((n) => n.id == noteEdited.id);
