@@ -1,8 +1,8 @@
-main{
+main {
   width: 100%;
 }
 
-main #mainTitle{
+main #mainTitle {
   padding: 10px 0px;
   font-size: clamp(2rem, 1.2vw + 1rem, 3rem);
 }
@@ -14,8 +14,8 @@ main #mainTitle{
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 35px 60px;
 }
- @media (max-width: 450px) {
+@media (max-width: 450px) {
   .notesContainer {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
- }
+}

@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { NoteContext } from "../context/NotesContext";
 import { NotesCard } from "./NotesCard";
 import NotesModal from "./NotesModal";
-import "./NotesList.css";
+import "./notesList.css";
 
 function NotesList() {
   const { notas, setNotas } = useContext(NoteContext);
