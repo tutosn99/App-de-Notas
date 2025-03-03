@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./NotesModal.css";
+import "./styles/NotesModal.css";
 import { AiOutlineClose } from "react-icons/ai";
 
 const ModalVisible = ({ info }) => {

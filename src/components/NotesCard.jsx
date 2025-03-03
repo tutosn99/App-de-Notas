@@ -1,6 +1,6 @@
 import { BsPencil, BsPencilFill, BsTrash, BsTrash2 } from "react-icons/bs";
 import { NoteContext } from "../context/NotesContext";
-import "./NotesCard.css";
+import "./styles/NotesCard.css";
 import { useContext } from "react";
 
 export function NotesCard({ nota, modalOn, openModalEdit }) {

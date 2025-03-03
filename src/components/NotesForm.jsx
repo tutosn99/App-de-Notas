@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react'
 import { NoteContext } from '../context/NotesContext'
-import "./NotesForm.css";
+import "./styles/NotesForm.css";
 
 function NotesForm() {
 
