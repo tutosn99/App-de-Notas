@@ -1,26 +1,36 @@
 import { useContext, useState } from 'react'
 import { NoteContext } from '../context/NotesContext'
+import "./NotesForm.css";
 
 function NotesForm() {
 
     const {notas, crearNota} = useContext(NoteContext)
 
-    const [titleInput, setTitleInput] = useState()
-    const [subtitleInput, setSubtitleInput] = useState()
-    const [contentInput, setContentInput] = useState()
+    const [message, setMessage] = useState(false)
+
+    const [titleInput, setTitleInput] = useState('')
+    const [subtitleInput, setSubtitleInput] = useState('')
+    const [contentInput, setContentInput] = useState('')
 
     const formHandleSubmit = (e) => {
         e.preventDefault()
         crearNota(titleInput, subtitleInput, contentInput)
+        setTitleInput('')
+        setSubtitleInput('')
+        setContentInput('')
+        setMessage(true)
+        setInterval(() => {
+            setMessage(false)
+        }, 10000);
     }
 
     return (
         <div className="containerForm">
-            <button onClick={()=>{console.log(notas)}}>Ver Tareas por Consola</button>
             <form onSubmit={formHandleSubmit}>
                 <div className="formInput" id="title">
                     <label>Titulo</label>
                     <input
+                        autoFocus
                         type="text"
                         placeholder="Titulo..."
                         value={titleInput}
@@ -57,6 +67,7 @@ function NotesForm() {
                 <button className="inputButton" type="submit">
                     Agregar
                 </button>
+                {message ? <p style={{color: 'green'}}>Nota Agregada con exito</p> : <></>}
             </form>
         </div>
     );

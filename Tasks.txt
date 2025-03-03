@@ -34,7 +34,7 @@ Editar las Notas Existentes
        |____ [x] Agregar Botón para Guardar
 
 Eliminar Tareas
-[] Agregar Botón de Borrar (Ícono Basura)
+[x] Agregar Botón de Borrar (Ícono Basura)
 |____ [] Mostrar un Modal de Confirmación
        |____ [] Mostrar Texto de Advertencia
        |____ [] Agregar Boton de Confirmar

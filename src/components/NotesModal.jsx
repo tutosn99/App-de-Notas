@@ -30,6 +30,7 @@ const ModalEditable = ({ info, editInfo }) => {
 
   return (
     <form id="editable" onSubmit={editSubmit}>
+      <label id="editLabel">Titulo:</label>
       <input
         type="text"
         id="titulo"
@@ -38,6 +39,7 @@ const ModalEditable = ({ info, editInfo }) => {
         }}
         value={tituloInput}
       ></input>
+      <label id="editLabel">Subtitulo:</label>
       <input
         type="text"
         id="subtitulo"
@@ -46,14 +48,16 @@ const ModalEditable = ({ info, editInfo }) => {
         }}
         value={subtituloInput}
       ></input>
-      <input
+      <label id="editLabel">Contenido:</label>
+      <textarea
+        rows="1"
         type="text"
         id="contenido"
         onChange={(i) => {
           setContenidoInput(i.target.value);
         }}
         value={contenidoInput}
-      ></input>
+      ></textarea>
       <button type="submit">Editar</button>
     </form>
   );

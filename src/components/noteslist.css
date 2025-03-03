@@ -1,34 +1,21 @@
-.notesContainer{
-    gap: 20px;
-    display: flex;
-    flex-wrap: wrap;
+main{
+  width: 100%;
 }
 
-.noteCard{
-    flex: 1;
-    min-width: 250px;
-    max-width: 350px;
-    min-height: 150px;
-    border: solid 1px;
-    border-radius: 10px;
-    padding: 10px 25px 10px 15px;
-    display: flex;
-    flex-direction: column;
+main #mainTitle{
+  padding: 10px 0px;
+  font-size: clamp(2rem, 1.2vw + 1rem, 3rem);
 }
 
-.noteCard h1{
-    font-size: 1.3rem;
+.notesContainer {
+  gap: 30px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 35px 60px;
 }
-.noteCard h2{
-    flex: 1;
-    font-size: 1.2rem;
-    font-weight: normal;
-}
-
-.btnNotes{
-    display: flex;
-}
-
-.btnNotes .open{
-    flex: 1;
-}
+ @media (max-width: 450px) {
+  .notesContainer {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+ }

@@ -16,8 +16,12 @@ export function NotesContextProvider({ children }) {
     setNotas([...notas, { id, titulo, subtitulo, contenido }]);
   };
 
+  const eliminarNota = (note) => {
+    setNotas(notas.filter( n => n !== note))
+  };
+
   return (
-    <NoteContext.Provider value={{ setNotas , notas, crearNota }}>
+    <NoteContext.Provider value={{ setNotas, notas, crearNota, eliminarNota }}>
       {children}
     </NoteContext.Provider>
   );

@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { NoteContext } from "../context/NotesContext";
 import { NotesCard } from "./NotesCard";
 import NotesModal from "./NotesModal";
-import "./noteslist.css";
+import "./NotesList.css";
 
 function NotesList() {
   const { notas, setNotas } = useContext(NoteContext);
@@ -68,7 +68,7 @@ function NotesList() {
 
   return (
     <main>
-      <h2>Tareas</h2>
+      <h2 id="mainTitle">Tareas</h2>
       <ul className="notesContainer">
         <NotesCard nota={notas} modalOn={openModal} modalOff={closeModal} />
       </ul>
